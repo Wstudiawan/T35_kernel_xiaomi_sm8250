@@ -38,7 +38,7 @@ elif [ "${DEVICE}" = "apollo" ]; then
 DEFCONFIG=apollo_defconfig
 MODEL="Mi 10T Pro"
 elif [ "${DEVICE}" = "munch" ]; then
-DEFCONFIG=vendor/kona_defconfig
+DEFCONFIG=munch_defconfig
 MODEL="Poco F4"
 fi
 
@@ -105,7 +105,7 @@ function cloneTC() {
 	  		echo "  Already Cloned Aosp Clang"
 	  		echo "××××××××××××××××××××××××××××"
 			else
-			export CLANG_VERSION="clang-r498229"
+			export CLANG_VERSION="clang-r498229b"
 			echo "* It's not cloned, cloning it..."
         		mkdir clangB
         		cd clangB || exit
