@@ -1,0 +1,22 @@
+name: Klinker Kernel Munch
+run-name: Klinker Kernel Munch
+
+on:
+  push:
+    branches: [ picel-sched ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: nexgang/ubuntu:latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Klinker Kernel Munch
+        run: bash build.sh null munch lto
+        env:
+           token: ${{ secrets.TOKEN }}
+           chat_id: ${{ secrets.CHAT_ID }}
