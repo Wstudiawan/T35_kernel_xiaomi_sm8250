@@ -38,7 +38,7 @@ elif [ "${DEVICE}" = "apollo" ]; then
 DEFCONFIG=apollo_defconfig
 MODEL="Mi 10T Pro"
 elif [ "${DEVICE}" = "munch" ]; then
-DEFCONFIG=munch_defconfig
+DEFCONFIG=alioth_defconfig
 MODEL="Poco F4"
 fi
 
